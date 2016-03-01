@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!--Este metadato le dice al navegador que use caracteres latinos como la letra ñÑ -->
+	<title>Primer problema: "Triangulos"</title>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+	<!--
+	Esto es un comentario en HTML
+	No sirve estos: // ni estos: /**/
+	-->
+
+	<!--Vamos a crear una pagina html para este primer ejercicio que ustedes seguro necesitarán hacer con los demás ejercicios-->
+
+	<!--Hay varias maneras de capturar datos en html para luego ser pasados a una función javascript. Para este ejercicio usaremos el más común: input-->
+
+	<!--Su sintaxis es la siguiente, está contenida por la etiqueta form y tiene un botón que ejecutará la función en javascript quedá de la siguiente manera:-->
+
+	<!--ATENCIÓN A ESTO: la etiqueta form no puede estar sin propiedades ni parametros, porque podría funcionar como no quisieramos ella cuando hace un envio recarga la pagina y el documento, borrando lo que ha traido, ante esta situación hay que añadirle la propiedad onsubmit con los parametros return false, dicho esto y como el mismo método lo indica, él enviará la información pero no recargará la pagina-->
+	<form onsubmit="return false;">
+		<input type="number" id="base" placeholder="Ingrese la base del triangulo">
+		<input type="number" id="altura" placeholder="Ingrese la altura del triangulo">
+
+		<!--Aunque esto sigue siendo un input al definirle su tipo cambia un botón esperando a tener una función, en este caso le añadimos la propiedad onclick que ejecuta la función javascript-->
+		<input onclick="triangulo()" type="submit" value="Calcular" id="calcular">
+
+	</form>
+	<!--
+	Cada input mandará al functions.js una información diferente, por lo que hay qué diferenciarlos así que les pongo un id,
+	la propiedad placeholder es un simple texto que introducimos para hacer que el usuario ponga la información que necesitamos.
+	
+	la etiqueta button es como su nombre lo indica un botón, en el le coloco la propiedad onclick que es parecida a onload, 
+	pero este se activa cuando le dan click en él, que es lo que necesitamos.
+	 -->
+
+	<div id="respuesta">
+	</div>
+
+	<!--Por último está la etiqueta div, que contendrá la información que llegue desde el functions.js-->
+
+
+</body>
+</html>
